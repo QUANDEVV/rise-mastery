@@ -10,7 +10,7 @@ const Footer = () => {
         {/* ...existing code... */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">Mastery</h3>
+            <h3 className="text-lg font-bold mb-4">Mastery Ha</h3>
             <p className="text-gray-400">A platform for learning and growth.</p>
           </div>
           <div>

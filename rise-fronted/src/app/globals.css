@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
+/* 
+  Design System
+  - Color Palette
+  - Typography
+*/
+
+/* 1. Color Palette */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
+  --foreground: #0a0a0a;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+
+  --primary: #171717;
+  --primary-foreground: #fafafa;
+
+  --secondary: #f4f4f5;
+  --secondary-foreground: #171717;
+
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+
+  --accent: #a1a1aa;
+  --accent-foreground: #171717;
+
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #fafafa;
+
+    --card: #0a0a0a;
+    --card-foreground: #fafafa;
+
+    --popover: #0a0a0a;
+    --popover-foreground: #fafafa;
+
+    --primary: #fafafa;
+    --primary-foreground: #171717;
+
+    --secondary: #27272a;
+    --secondary-foreground: #fafafa;
+
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+
+    --accent: #3f3f46;
+    --accent-foreground: #fafafa;
+
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #fafafa;
   }
 }
 
+/* 2. Theme Configuration */
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* 3. Base & Typography Styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 3rem; /* 48px */
+}
+
+h2 {
+  font-size: 2.25rem; /* 36px */
+}
+
+h3 {
+  font-size: 1.875rem; /* 30px */
+}
+
+p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.75;
+  color: var(--muted-foreground);
 }

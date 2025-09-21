@@ -11,6 +11,7 @@ const pwaConfig = {
   dest: "public",
   register: true,
   skipWaiting: true,
+  customWorkerDir: 'worker',
 };
 
 export default withPWA(pwaConfig)(nextConfig);

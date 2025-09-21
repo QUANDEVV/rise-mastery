@@ -74,6 +74,9 @@ const Hero = ({ activeTab, onTabChange }) => {
             <p className="text-sm text-muted-foreground">You have been retaining for</p>
             <p className="text-lg font-semibold text-primary">{userStreak} days</p>
           </div>
+            <Link href="/Community" className="">
+           HEY
+          </Link>
           <div className="mb-4">{iconNav}</div>
           <div className="max-w-xs mx-auto">{tabSwitcher}</div>
         </div>
@@ -94,11 +97,7 @@ const Hero = ({ activeTab, onTabChange }) => {
             </div>
             {iconNav}
           </div>
-          <Link href="/Community" className="ml-6">
-            <button className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">
-              Create Post
-            </button>
-          </Link>
+        
         </div>
       </div>
     </section>

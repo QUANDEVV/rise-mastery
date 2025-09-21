@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <InstallBanner />
-          <main>{children}</main>
+          <main style={{ paddingTop: 'var(--banner-height)' }}>{children}</main>
          
      
         </ThemeProvider>

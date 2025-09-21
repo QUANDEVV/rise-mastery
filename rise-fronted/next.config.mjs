@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
+import withPWA from "next-pwa";
+
 const nextConfig = {
   turbopack: {
     root: './',
   },
 };
 
-export default nextConfig;
+const pwaConfig = {
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+};
+
+export default withPWA(pwaConfig)(nextConfig);

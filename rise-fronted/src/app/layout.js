@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import InstallBanner from "@/components/InstallBanner/InstallBanner";
 
 
 const geistSans = Geist({
@@ -24,6 +25,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -33,7 +38,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-         
+          <InstallBanner />
           <main>{children}</main>
          
      

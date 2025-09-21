@@ -71,7 +71,7 @@ const Hero = ({ activeTab, onTabChange }) => {
         {/* --- MOBILE LAYOUT --- */}
         <div className="md:hidden">
           <div className="text-center mb-4">
-            <p className="text-sm text-muted-foreground">You have been retaining for</p>
+            <p className="text-sm text-muted-foreground">You have been retaining fors</p>
             <p className="text-lg font-semibold text-primary">{userStreak} days</p>
           </div>
             <Link href="/Community" className="">

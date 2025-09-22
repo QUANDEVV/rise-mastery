@@ -8,10 +8,10 @@ import { Flame, Users, Anchor, BookOpen, BarChart3 } from "lucide-react"
 
 const navItems = [
   { href: "/", label: "Feed", icon: Flame },
-  { href: "/community", label: "Community", icon: Users },
-  { href: "/transmute", label: "Transmute", icon: Anchor },
-  { href: "/anchor", label: "Anchor", icon: BookOpen },
-  { href: "/spiral", label: "Spiral", icon: BarChart3 },
+  { href: "/Community", label: "Community", icon: Users },
+  { href: "/Transmute", label: "Transmute", icon: Anchor },
+  { href: "/Anchor", label: "Anchor", icon: BookOpen },
+  { href: "/Spiral", label: "Spiral", icon: BarChart3 },
 ]
 
 export function MobileNav() {

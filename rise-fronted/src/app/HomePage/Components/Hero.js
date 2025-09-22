@@ -74,9 +74,7 @@ const Hero = ({ activeTab, onTabChange }) => {
             <p className="text-sm text-muted-foreground">You have been retaining fors</p>
             <p className="text-lg font-semibold text-primary">{userStreak} days</p>
           </div>
-            <Link href="/Community" className="">
-           HEY
-          </Link>
+
           <div className="mb-4">{iconNav}</div>
           <div className="max-w-xs mx-auto">{tabSwitcher}</div>
         </div>

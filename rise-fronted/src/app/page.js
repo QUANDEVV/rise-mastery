@@ -17,7 +17,7 @@ export default function Home() {
       
       {/* Conditionally render the content based on the active tab */}
       {activeTab === 'feed' ? <Feed /> : <Community />}
-      <PushSubscription />
+      {/* <PushSubscription /> */}
       <MobileNav />
       {/* <Footer /> */}
     </main>

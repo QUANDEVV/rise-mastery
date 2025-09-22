@@ -2,6 +2,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { UserProvider } from "@/contexts/UserContext";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import InstallBanner from "@/components/InstallBanner/InstallBanner";
@@ -41,10 +42,10 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <InstallBanner />
-          <main style={{ paddingTop: 'var(--banner-height)' }}>{children}</main>
-         
-     
+          <UserProvider>
+            <InstallBanner />
+            <main style={{ paddingTop: 'var(--banner-height)' }}>{children}</main>
+          </UserProvider>
         </ThemeProvider>
       </body>
     </html>

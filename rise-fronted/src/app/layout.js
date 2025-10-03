@@ -1,9 +1,7 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
 import InstallBanner from "@/components/InstallBanner/InstallBanner";
 
 
@@ -31,21 +29,23 @@ export default function RootLayout({ children }) {
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
+        {/*
+          Inline script to set initial theme class before React hydrates.
+          Default to dark to avoid white flash on shadcn components; respect saved preference.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark');}else if(t==='dark'){document.documentElement.classList.add('dark');}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){} })()`
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <InstallBanner />
-          <main style={{ paddingTop: 'var(--banner-height)' }}>{children}</main>
-         
-     
-        </ThemeProvider>
+        {/* Mount our simple ThemeProvider which toggles the `.dark` class on <html> */}
+        <ThemeProvider />
+        <InstallBanner />
+        <main style={{ paddingTop: 'var(--banner-height)' }}>{children}</main>
       </body>
     </html>
   );

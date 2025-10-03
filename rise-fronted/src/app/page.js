@@ -13,10 +13,10 @@ export default function Home() {
 
   return (
     <main>
-      <Hero activeTab={activeTab} onTabChange={setActiveTab} />
+      {/* <Hero activeTab={activeTab} onTabChange={setActiveTab} /> */}
       
       {/* Conditionally render the content based on the active tab */}
-      {activeTab === 'feed' ? <Feed /> : <Community />}
+      {/* {activeTab === 'feed' ? <Feed /> : <Community />} */}
       {/* <PushSubscription /> */}
       <MobileNav />
       {/* <Footer /> */}

@@ -4,14 +4,14 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Flame, Users, Anchor, BookOpen, BarChart3 } from "lucide-react"
+import { Flame, Users, Anchor, BookOpen, BarChart3 , Ban } from "lucide-react"
 
 const navItems = [
-  { href: "/", label: "Feed", icon: Flame },
-  { href: "/Community", label: "Community", icon: Users },
-  { href: "/Transmute", label: "Transmute", icon: Anchor },
-  { href: "/Anchor", label: "Anchor", icon: BookOpen },
-  { href: "/Spiral", label: "Spiral", icon: BarChart3 },
+  { href: "/", label: "NULL", icon: Ban }, 
+  { href: "/Community", label: "NULL", icon: Ban },
+  { href: "/Transmute", label: "NULL", icon: Ban },
+  { href: "/Anchor", label: "NULL", icon: Ban },
+  { href: "/Spiral", label: "NULL", icon: Ban },
 ]
 
 export function MobileNav() {

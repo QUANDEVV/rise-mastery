@@ -71,12 +71,12 @@ const Hero = ({ activeTab, onTabChange }) => {
         {/* --- MOBILE LAYOUT --- */}
         <div className="md:hidden">
           <div className="text-center mb-4">
-            <p className="text-sm text-muted-foreground">You have been retaining fors</p>
-            <p className="text-lg font-semibold text-primary">{userStreak} days</p>
+            {/* <p className="text-sm text-muted-foreground">You have been retaining fors</p> */}
+            {/* <p className="text-lg font-semibold text-primary">{userStreak} days</p> */}
           </div>
 
-          <div className="mb-4">{iconNav}</div>
-          <div className="max-w-xs mx-auto">{tabSwitcher}</div>
+          {/* <div className="mb-4">{iconNav}</div> */}
+          {/* <div className="max-w-xs mx-auto">{tabSwitcher}</div> */}
         </div>
 
         {/* --- DESKTOP LAYOUT --- */}

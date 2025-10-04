@@ -1,0 +1,8 @@
+rise-backend/node_modules
+rise-backend/vendor
+rise-backend/.git
+rise-backend/.env
+rise-backend/storage
+.DS_Store
+.idea
+.vscode

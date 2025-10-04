@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: rise-mastery-api
+    env: docker
+    branch: development
+    plan: free
+    region: oregon
+    build:
+      dockerfilePath: rise-backend/Dockerfile
+      context: rise-backend

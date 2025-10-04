@@ -1,0 +1,53 @@
+# Docker Compose for local development and testing
+# Use this to test your Docker setup before deploying to Render
+
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rise-backend-app
+    ports:
+      - "8080:80"
+    environment:
+      - APP_NAME=Rise Mastery API
+      - APP_ENV=local
+      - APP_KEY=base64:your-local-key
+      - APP_DEBUG=true
+      - APP_URL=http://localhost:8080
+      - DB_CONNECTION=sqlite
+      - DB_DATABASE=/var/www/html/database/database.sqlite
+      - SESSION_DRIVER=database
+      - QUEUE_CONNECTION=database
+      - CACHE_STORE=database
+    volumes:
+      # Mount database directory for persistence during development
+      - ./database:/var/www/html/database
+      # Mount storage for file uploads
+      - ./storage:/var/www/html/storage
+    networks:
+      - rise-network
+
+  # Optional PostgreSQL for testing production-like setup
+  postgres:
+    image: postgres:15-alpine
+    container_name: rise-backend-postgres
+    environment:
+      POSTGRES_DB: rise_mastery
+      POSTGRES_USER: laravel
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - rise-network
+
+volumes:
+  postgres_data:
+
+networks:
+  rise-network:
+    driver: bridge

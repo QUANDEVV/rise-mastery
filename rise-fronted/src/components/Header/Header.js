@@ -38,11 +38,11 @@ export default function Header() {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center space-x-4">
           <ThemeToggle />
-          <Link href="/login">
-            <Button variant="ghost">Login</Button>
+          <Link href="/">
+            <Button variant="ghost">NULL</Button>
           </Link>
-          <Link href="/join">
-            <Button>Join</Button>
+          <Link href="/">
+            <Button>NULL</Button>
           </Link>
         </div>
 
@@ -70,11 +70,11 @@ export default function Header() {
               </Link>
             ))}
             <div className="flex space-x-2 pt-4 border-t border-gray-200 dark:border-gray-800">
-              <Link href="/login" className="flex-1">
-                <Button variant="ghost" className="w-full">Login</Button>
+              <Link href="/" className="flex-1">
+                <Button variant="ghost" className="w-full">NULL</Button>
               </Link>
-              <Link href="/join" className="flex-1">
-                <Button className="w-full">Join</Button>
+              <Link href="/" className="flex-1">
+                <Button className="w-full">NULL</Button>
               </Link>
             </div>
           </nav>

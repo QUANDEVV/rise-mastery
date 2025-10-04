@@ -3,7 +3,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
+import { cn } from "../../../lib/utils"
 import { Flame, Users, Anchor, BookOpen, BarChart3 , Ban } from "lucide-react"
 
 const navItems = [

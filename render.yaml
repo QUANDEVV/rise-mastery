@@ -7,3 +7,6 @@ services:
     build:
       dockerfilePath: rise-backend/Dockerfile
       context: rise-backend
+    envVars:
+      - key: RENDER_IGNORE
+        value: "true"

@@ -1,15 +1,14 @@
 
 import React from 'react';
-import Header from './Components/Header';
+// Import the shared Header component using the absolute alias used elsewhere
+import Header from '@/components/Header/Header';
 
-
-// Community layout with its own header and footer
+// HomePage layout with shared header and slot for children
 export default function Layout({ children }) {
   return (
     <>
-    
+      <Header />
       {children}
-      
     </>
   );
 }

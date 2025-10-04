@@ -6,7 +6,6 @@ services:
     plan: free
     region: oregon
     build:
-      # Use the repository-root-relative path so Render finds the Dockerfile
-      dockerfilePath: rise-backend/Dockerfile
-      # Build context should be the backend folder
+      # Dockerfile path is relative to the build context; context is the backend
+      dockerfilePath: Dockerfile
       context: rise-backend

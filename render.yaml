@@ -5,7 +5,9 @@ services:
     branch: main
     runtime: docker
     build:
-      dockerfilePath: rise-backend/Dockerfile
+      # Dockerfile is inside the backend context; when context is set to
+      # `rise-backend` the Dockerfile path should be relative to that context.
+      dockerfilePath: Dockerfile
       context: rise-backend
     envVars:
       - key: RENDER_IGNORE
